@@ -20,7 +20,7 @@ function Home() {
   return (
     <>
       <section id="home" className="h-screen md:flex">
-        <div className="w-4/5 md:w-max m-auto md:ml-28 space-y-2 ">
+        <div className="w-4/5 md:w-max m-auto md:ml-28 space-y-2 h-[85vh] flex flex-col justify-center">
           <p className="text-tron-t uppercase text-3xl">Portofolio de</p>
           <div className="border-4 border-tron-t px-4 py-2 md:py-4">
             <h1 className="text-tron-t uppercase text-[68px] md:text-8xl md:text-center font-bold">
