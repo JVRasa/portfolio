@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+:root {
+  background-color: #5738ce;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
