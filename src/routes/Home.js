@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ModalPro1 from '../components/ModalPro1';
+import ModalContext from '../contexts/ModalContext';
+import proJeTree from '../img/projet.jpg';
 
 function Home() {
+  const { is1stModalOpen, setIs1stModalOpen } = useContext(ModalContext);
   return (
     <>
       <section id="home" className="h-screen md:flex bg-acid-w">
@@ -21,30 +25,41 @@ function Home() {
         <h1 className="pb-6 text-acid-w text-5xl font-bold text-center">
           MES PROJETS
         </h1>
-        <div className="w-4/5 md:w-3/5 m-auto md:h-[70vh] grid md:grid-cols-3 md:grid-rows-3 gap-4">
-          <article className="md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 md:h-80 relative overflow-hidden">
-            <img
-              className="object-cover w-full h-full"
-              src="https://i.picsum.photos/id/247/600/600.jpg?hmac=pZcBkwRClP5oEJ8z23ub9EonmQ37jS212yQWJf_NtN4"
-              alt="jetree projet"
-            />
-            <div className="absolute top-0 left-0 bottom-0 right-0 hover:-top-80 hover:opacity-70 ease-in duration-300">
-              <div className="h-80"> </div>
-              <div className="bg-acid-w h-80">jetree</div>
-            </div>
-          </article>
-          <article className="md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-4 bg-[url('https://i.picsum.photos/id/524/600/600.jpg?hmac=OErekoRIkHPY98HCtPwtUzhoWLwL2GXXelUYvOOSD8o')] relative overflow-hidden">
+        <div className="w-4/5 md:w-3/5 m-auto h-[70vh] grid gap-3 grid-cols-1 md:grid-cols-3">
+          <article
+            className="h-full w-full md:col-start-1 md:col-end-2 relative overflow-hidden"
+            style={{ backgroundImage: `url(${proJeTree})` }}
+          >
             <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
               <div className="h-full"> </div>
-              <div className="bg-acid-w h-full">nanar production</div>
+              <div className="bg-acid-w h-full">
+                Je Tree
+                <button
+                  onClick={() => setIs1stModalOpen(!is1stModalOpen)}
+                  type="button"
+                >
+                  DETAILS
+                </button>
+              </div>
             </div>
           </article>
-          <article className="md:col-start-1 md:col-end-3 md:row-start-3 md:row-end-4 md:h-40">
-            <img
-              className="object-cover w-full h-full"
-              src="https://i.picsum.photos/id/959/600/600.jpg?hmac=8iYxVGEbg0wg2uiUuOFW0JUeo5BxV-eif0rRn4Rlr8M"
-              alt="jetree projet"
-            />
+          <article
+            className="h-full w-full md:col-start-2 md:col-end-3 relative overflow-hidden"
+            style={{ backgroundImage: `url(${proJeTree})` }}
+          >
+            <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
+              <div className="h-full"> </div>
+              <div className="bg-acid-w h-full">Je Tree</div>
+            </div>
+          </article>
+          <article
+            className="h-full w-full md:col-start-3 md:col-end-4 relative overflow-hidden"
+            style={{ backgroundImage: `url(${proJeTree})` }}
+          >
+            <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
+              <div className="h-full"> </div>
+              <div className="bg-acid-w h-full">Je Tree</div>
+            </div>
           </article>
         </div>
       </section>
@@ -59,11 +74,12 @@ function Home() {
             le design et le graphisme, ce qui m’a conduit de fil en aiguille, au
             code et au développement web. Aujourd’hui je souhaite améliorer mes
             compétences, en apprendre plus et surtout transformer une passion en
-            métier.
+            métier !
           </p>
           <p className="text-xl my-3 font-semibold text-acid-w">MES TECHNOS</p>
           <p className="text-xl">
-            ReactJs, NodeJs, Javascript, SQL, CSS, HTML.
+            ReactJs, NodeJs, NextJs, Prisma, Cypress, SQL, Javascript, CSS,
+            HTML.
           </p>
           <p className="text-xl my-3 font-semibold text-acid-w">
             ET POUR FINIR... ?
@@ -73,6 +89,8 @@ function Home() {
           </p>
         </div>
       </section>
+
+      <ModalPro1 />
     </>
   );
 }
