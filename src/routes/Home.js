@@ -21,44 +21,124 @@ function Home() {
         </div>
         <div className="hidden md:flex md:items-end">indeed / github</div>
       </section>
-      <section id="projets" className="py-6 md:py-16">
+      <section id="projets" className="py-6 h-full md:py-16">
         <h1 className="pb-6 text-acid-w text-5xl font-bold text-center">
           MES PROJETS
         </h1>
-        <div className="w-4/5 md:w-3/5 m-auto h-[70vh] grid gap-3 grid-cols-1 md:grid-cols-3">
+        <div className="w-4/5 md:w-3/5 h-[150vh] md:h-[95vh] m-auto grid gap-3 grid-cols-1 md:grid-cols-3">
           <article
-            className="h-full w-full md:col-start-1 md:col-end-2 relative overflow-hidden"
-            style={{ backgroundImage: `url(${proJeTree})` }}
+            className="h-full w-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3 relative overflow-hidden"
+            style={{
+              backgroundImage: `url(${proJeTree})`,
+              backgroundSize: 'cover',
+            }}
           >
             <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
               <div className="h-full"> </div>
-              <div className="bg-acid-w h-full">
-                Je Tree
-                <button
-                  onClick={() => setIs1stModalOpen(!is1stModalOpen)}
-                  type="button"
-                >
-                  DETAILS
-                </button>
+              <div
+                className="bg-acid-w h-full"
+                onClick={() => setIs1stModalOpen(!is1stModalOpen)}
+              >
+                <div className="flex flex-col h-full justify-center gap-2">
+                  <h2 className="text-white-w font-bold text-center text-4xl">
+                    LOCA-B
+                  </h2>
+                  <hr className="w-4/5 h-2 bg-white-w mx-auto" />
+                  <h3 className="text-white-w text-center text-xl">
+                    PROJET FORMATION
+                  </h3>
+                  <button
+                    className="bg-white-w py-4 px-8 flex mx-auto mt-10"
+                    type="button"
+                  >
+                    DETAILS
+                  </button>
+                </div>
               </div>
             </div>
           </article>
           <article
             className="h-full w-full md:col-start-2 md:col-end-3 relative overflow-hidden"
-            style={{ backgroundImage: `url(${proJeTree})` }}
+            style={{
+              backgroundImage: `url(${proJeTree})`,
+              backgroundSize: 'cover',
+            }}
           >
             <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
               <div className="h-full"> </div>
-              <div className="bg-acid-w h-full">Je Tree</div>
+              <div className="bg-acid-w h-full">
+                <div className="flex flex-col h-full justify-center gap-2">
+                  <h2 className="text-white-w font-bold text-center text-4xl">
+                    JETREE
+                  </h2>
+                  <hr className="w-4/5 h-2 bg-white-w mx-auto" />
+                  <h3 className="text-white-w text-center text-xl">
+                    PROJET FORMATION
+                  </h3>
+                  <button
+                    className="bg-white-w py-4 px-8 flex mx-auto mt-10"
+                    type="button"
+                  >
+                    DETAILS
+                  </button>
+                </div>
+              </div>
             </div>
           </article>
           <article
-            className="h-full w-full md:col-start-3 md:col-end-4 relative overflow-hidden"
-            style={{ backgroundImage: `url(${proJeTree})` }}
+            className="h-full w-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 relative overflow-hidden"
+            style={{
+              backgroundImage: `url(${proJeTree})`,
+              backgroundSize: 'cover',
+            }}
           >
             <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
               <div className="h-full"> </div>
-              <div className="bg-acid-w h-full">Je Tree</div>
+              <div className="bg-acid-w h-full">
+                <div className="flex flex-col h-full justify-center gap-2">
+                  <h2 className="text-white-w font-bold text-center text-4xl">
+                    NANAR PRODUCTION
+                  </h2>
+                  <hr className="w-4/5 h-2 bg-white-w mx-auto" />
+                  <h3 className="text-white-w text-center text-xl">
+                    PROJET FORMATION
+                  </h3>
+                  <button
+                    className="bg-white-w py-4 px-8 flex mx-auto mt-10"
+                    type="button"
+                  >
+                    DETAILS
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            className="h-full w-full md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 relative overflow-hidden"
+            style={{
+              backgroundImage: `url(${proJeTree})`,
+              backgroundSize: 'cover',
+            }}
+          >
+            <div className="absolute top-0 left-0 bottom-0 right-0 hover:-translate-y-full hover:opacity-70 ease-in duration-300">
+              <div className="h-full"> </div>
+              <div className="bg-acid-w h-full">
+                <div className="flex flex-col h-full justify-center gap-2">
+                  <h2 className="text-white-w font-bold text-center text-4xl">
+                    SUPER <br />5 SNAKE
+                  </h2>
+                  <hr className="w-4/5 h-2 bg-white-w mx-auto" />
+                  <h3 className="text-white-w text-center text-xl">
+                    PROJET FORMATION
+                  </h3>
+                  <button
+                    className="bg-white-w py-4 px-8 flex mx-auto mt-10"
+                    type="button"
+                  >
+                    DETAILS
+                  </button>
+                </div>
+              </div>
             </div>
           </article>
         </div>

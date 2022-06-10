@@ -6,8 +6,10 @@ function ModalPro1() {
   return (
     <section
       className={`bg-acid-w h-[100vh] fixed top-0 left-0 w-[100vw] ${
-        is1stModalOpen ? 'translate-x-0' : '-translate-x-full'
-      } ease-in-out duration-300`}
+        is1stModalOpen
+          ? 'translate-x-0 shadow-[400px_0px_0px_0px_#FF30AA]'
+          : '-translate-x-full shadow-[0px_0px_0px_0px_#FF30AA]'
+      } ease-in-out duration-[400ms]`}
     >
       <div className="flex justify-end w-[90%] mx-auto mt-0">
         <button
