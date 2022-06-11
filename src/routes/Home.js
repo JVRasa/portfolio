@@ -1,15 +1,21 @@
 import React, { useContext, useState, useRef } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import ModalContext from '../contexts/ModalContext';
+
 import ModalPro1 from '../components/ModalPro1';
 import ModalPro2 from '../components/ModalPro2';
 import ModalPro3 from '../components/ModalPro3';
 import ModalPro4 from '../components/ModalPro4';
-import ModalContext from '../contexts/ModalContext';
-import proJeTree from '../img/projet.jpg';
+
+import locaBImage from '../img/locab.png';
+import jeTreeImage from '../img/jetree.png';
+import nanarImage from '../img/nanar.png';
+import super5snakeImage from '../img/s5s.png';
+
 import linkedIcon from '../img/linkedinWhite.png';
 import githubIcon from '../img/githubWhite.png';
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
 
+import emailjs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
@@ -104,7 +110,7 @@ function Home() {
           <article
             className="h-full w-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3 relative overflow-hidden cursor-pointer"
             style={{
-              backgroundImage: `url(${proJeTree})`,
+              backgroundImage: `url(${locaBImage})`,
               backgroundSize: 'cover',
             }}
           >
@@ -135,7 +141,7 @@ function Home() {
           <article
             className="h-full w-full md:col-start-2 md:col-end-3 relative overflow-hidden cursor-pointer"
             style={{
-              backgroundImage: `url(${proJeTree})`,
+              backgroundImage: `url(${jeTreeImage})`,
               backgroundSize: 'cover',
             }}
           >
@@ -166,7 +172,7 @@ function Home() {
           <article
             className="h-full w-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 relative overflow-hidden cursor-pointer"
             style={{
-              backgroundImage: `url(${proJeTree})`,
+              backgroundImage: `url(${nanarImage})`,
               backgroundSize: 'cover',
             }}
           >
@@ -197,7 +203,7 @@ function Home() {
           <article
             className="h-full w-full md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 relative overflow-hidden cursor-pointer"
             style={{
-              backgroundImage: `url(${proJeTree})`,
+              backgroundImage: `url(${super5snakeImage})`,
               backgroundSize: 'cover',
             }}
           >

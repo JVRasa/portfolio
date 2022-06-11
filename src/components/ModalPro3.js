@@ -9,7 +9,7 @@ function ModalPro1() {
         is3rdModalOpen
           ? 'translate-x-0 shadow-[500px_0px_0px_0px_#FF30AA] overflow-auto'
           : '-translate-x-full shadow-[0px_0px_0px_0px_#FF30AA]'
-      } ease-in-out duration-[500ms]`}
+      } ease-in-out duration-700`}
     >
       <div className="flex w-[90%] mx-auto mt-0">
         <button
@@ -33,8 +33,10 @@ function ModalPro1() {
           client fictif - 6 semaines
         </h2>
         <p className="text-white-w text-xl my-5 font-light">
-          Réalisation d'un site avec pour thématique les nanars : suggestion
-          suite à un quiz, recherche via l'utilisation de filtres
+          Réalisation d'un site avec pour thématique les nanars : suggestion de
+          nanars suite à un quiz, recherche d'un nanar via l'utilisation de
+          filtres, poster une annonce pour rencontrer d'autres amateurs de
+          nanars
         </p>
         <p className="text-white-w text-xl my-5 font-light">
           <span className="font-bold">TECHNOS</span> : <br />- ReactJs, API

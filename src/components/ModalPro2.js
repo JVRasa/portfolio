@@ -9,7 +9,7 @@ function ModalPro1() {
         is2ndModalOpen
           ? 'translate-x-0 shadow-[500px_0px_0px_0px_#FF30AA] overflow-auto'
           : '-translate-x-full shadow-[0px_0px_0px_0px_#FF30AA]'
-      } ease-in-out duration-[500ms]`}
+      } ease-in-out duration-700`}
     >
       <div className="flex w-[90%] mx-auto mt-0">
         <button

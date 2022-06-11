@@ -31,7 +31,7 @@ function Header() {
           isOpen
             ? 'translate-x-0 shadow-[0px_0px_0px_600px_#FF30AA]'
             : 'translate-x-full shadow-[0px_0px_0px_0px_#FF30AA]'
-        } ease-in-out duration-500`}
+        } ease-in-out duration-700`}
       >
         <ul className="h-[90%] flex flex-col justify-center items-center gap-4 md:gap-6 md:h-screen text-center">
           <HashLink
