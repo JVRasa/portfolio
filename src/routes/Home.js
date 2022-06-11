@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import ModalPro1 from '../components/ModalPro1';
 import ModalPro2 from '../components/ModalPro2';
 import ModalPro3 from '../components/ModalPro3';
@@ -19,6 +19,15 @@ function Home() {
     is4thModalOpen,
     setIs4thModalOpen,
   } = useContext(ModalContext);
+
+  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <section id="home" className="h-screen md:flex">
@@ -216,6 +225,71 @@ function Home() {
           <span className="md:hidden">CONTACT</span>
           <span className="hidden md:inline">ME CONTACTER</span>
         </h1>
+        <article className="w-[80%] m-auto mt-6 md:w-[60%]">
+          <p className="md:text-center">
+            Si mon profil vous intéresse, n'hésitez pas à me contacter
+            directement sur{' '}
+            <a
+              href="https://www.linkedin.com/in/julie-rasa/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-purple-r font-bold hover:text-xl cursor-pointer no-underline border-b-2 border-dotted ease-in-out duration-300"
+            >
+              LinkedIn
+            </a>{' '}
+            ou via le formulaire ci dessous
+          </p>
+          <form
+            autoComplete="off"
+            className="mt-4 flex flex-col gap-6"
+            onSubmit={handleSubmitForm}
+          >
+            <label htmlFor="name">
+              <span className="text-[#999999]">Nom</span>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Votre nom"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="block w-full border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0"
+                required
+              />
+            </label>
+            <label htmlFor="name">
+              <span className="text-[#999999]">E-mail</span>
+              <input
+                id="name"
+                name="name"
+                type="email"
+                placeholder="Votre adresse e-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="block w-full border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0"
+                required
+              />
+            </label>
+            <label htmlFor="message">
+              <span className="text-[#999999]">Message</span>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Votre message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="block w-full h-28 border-0 border-b-2 border-gray-300 focus:outline-none focus:ring-0"
+                required
+              />
+            </label>
+            <button
+              type="submit"
+              className="mx-auto mt-6 inline-block text-white-w bg-acid-w hover:bg-acid-w-light focus:ring-4 focus:outline-none focus:ring-acid-w-light font-medium rounded-lg px-8 py-2.5 text-center ease-in-out duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </article>
       </section>
 
       <ModalPro1 />

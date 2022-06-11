@@ -14,7 +14,7 @@ function ModalPro1() {
       <div className="flex w-[90%] mx-auto mt-0">
         <button
           type="button"
-          className="text-8xl md:text-[10rem] font-black text-purple-r"
+          className="text-8xl md:text-[10rem] font-black text-purple-r hover:-rotate-90 ease-in-out duration-500"
           onClick={() => setIs1stModalOpen(!is1stModalOpen)}
         >
           ×
@@ -49,10 +49,7 @@ function ModalPro1() {
         </p>
       </article>
 
-      <div className="bg-tron-t md:mx-auto mx-20 my-10 text-3xl p-4 md:w-[25%]">
-        <p className="text-center text-acid-w">VISITER</p>
-      </div>
-      <p className="text-white-w text-xl font-light text-center pb-6">
+      <p className="text-white-w pt-8 text-xl font-light text-center pb-6">
         <span className="font-bold">Réalisé en</span> : Mai - Juillet 2022
       </p>
     </section>

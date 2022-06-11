@@ -14,7 +14,7 @@ function ModalPro1() {
       <div className="flex w-[90%] mx-auto mt-0">
         <button
           type="button"
-          className="text-8xl md:text-[10rem] font-black text-purple-r"
+          className="text-8xl md:text-[10rem] font-black text-purple-r hover:-rotate-90 ease-in-out duration-500"
           onClick={() => setIs4thModalOpen(!is4thModalOpen)}
         >
           ×

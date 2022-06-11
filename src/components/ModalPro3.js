@@ -14,7 +14,7 @@ function ModalPro1() {
       <div className="flex w-[90%] mx-auto mt-0">
         <button
           type="button"
-          className="text-8xl md:text-[10rem] font-black text-purple-r"
+          className="text-8xl md:text-[10rem] font-black text-purple-r hover:-rotate-90 ease-in-out duration-500"
           onClick={() => setIs3rdModalOpen(!is3rdModalOpen)}
         >
           ×
@@ -50,8 +50,17 @@ function ModalPro1() {
         </p>
       </article>
 
-      <div className="bg-tron-t md:mx-auto mx-20 my-10 text-3xl p-4 md:w-[15%]">
-        <p className="text-center text-acid-w">VISITER</p>
+      <div className="my-10  mt-12 text-3xl">
+        <p className="text-center ">
+          <a
+            href="https://films-claques.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-tron-t text-acid-w font-bold px-8 py-4 hover:text-4xl cursor-pointer no-underline ease-in-out duration-300"
+          >
+            VISITER
+          </a>
+        </p>
       </div>
       <p className="text-white-w text-xl font-light text-center pb-6">
         <span className="font-bold">Réalisé en</span> : Avril - Mai 2022
