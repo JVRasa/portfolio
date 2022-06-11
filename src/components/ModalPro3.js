@@ -24,8 +24,8 @@ function ModalPro1() {
         <div className="text-tron-t text-2xl mb-2 md:text-xl">
           PROJET EN FORMATION
         </div>
-        <div className="border-4 border-tron-t px-4 py-2 md:py-4 mb-2 md:w-[60%]">
-          <h1 className="text-tron-t text-5xl font-bold md:text-5xl">
+        <div className="border-4 border-tron-t inline-block px-4 py-2 md:py-4 mb-2">
+          <h1 className="text-tron-t text-3xl font-bold md:text-5xl">
             NANAR PRODUCTION
           </h1>
         </div>

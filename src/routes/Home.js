@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import ModalPro1 from '../components/ModalPro1';
 import ModalPro2 from '../components/ModalPro2';
 import ModalPro3 from '../components/ModalPro3';
@@ -7,6 +7,10 @@ import ModalContext from '../contexts/ModalContext';
 import proJeTree from '../img/projet.jpg';
 import linkedIcon from '../img/linkedinWhite.png';
 import githubIcon from '../img/githubWhite.png';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 function Home() {
   const {
@@ -24,8 +28,37 @@ function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const form = useRef();
+
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_PUBLIC_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast('🚀 Message envoyé avec succès, merci !', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          setMessage('');
+          setName('');
+          setEmail('');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -144,7 +177,7 @@ function Home() {
                 onClick={() => setIs3rdModalOpen(!is3rdModalOpen)}
               >
                 <div className="flex flex-col h-full justify-center gap-2">
-                  <h2 className="text-white-w font-bold text-center text-4xl">
+                  <h2 className="text-white-w font-bold text-center text-3xl md:text-4xl">
                     NANAR PRODUCTION
                   </h2>
                   <hr className="w-4/5 h-2 bg-white-w mx-auto" />
@@ -199,23 +232,23 @@ function Home() {
           A PROPOS
         </h1>
         <div className="bg-white-w shadow-[20px_20px_0px_0px_#00EEE2] w-10/12 md:w-3/5 m-auto p-3">
-          <p className="text-xl">
+          <p>
             Hello ! Je m’appelle Julie et je suis actuellement en formation pour
             devenir développeuse web fullstack. J’ai toujours eu un attrait pour
-            le design et le graphisme, ce qui m’a conduit de fil en aiguille, au
-            code et au développement web. Aujourd’hui je souhaite améliorer mes
-            compétences, en apprendre plus et surtout transformer une passion en
-            métier.
+            le design et le graphisme - ce qui m’a conduit, de fil en aiguille,
+            au code et au développement web. Aujourd’hui je souhaite améliorer
+            mes compétences, en apprendre plus et surtout transformer une
+            passion en métier.
           </p>
           <p className="text-xl my-3 font-semibold text-acid-w">MES TECHNOS</p>
-          <p className="text-xl">
+          <p>
             ReactJs, NodeJs, NextJs, Prisma, Cypress, SQL, Javascript, CSS,
             HTML.
           </p>
           <p className="text-xl my-3 font-semibold text-acid-w">
             ET POUR FINIR... ?
           </p>
-          <p className="text-xl">
+          <p>
             Je suis incollable sur les farming sim games et j’adore la couture !
           </p>
         </div>
@@ -240,15 +273,16 @@ function Home() {
             ou via le formulaire ci dessous
           </p>
           <form
+            ref={form}
             autoComplete="off"
             className="mt-4 flex flex-col gap-6"
             onSubmit={handleSubmitForm}
           >
-            <label htmlFor="name">
+            <label htmlFor="user_name">
               <span className="text-[#999999]">Nom</span>
               <input
-                id="name"
-                name="name"
+                id="user_name"
+                name="user_name"
                 type="text"
                 placeholder="Votre nom"
                 value={name}
@@ -257,11 +291,11 @@ function Home() {
                 required
               />
             </label>
-            <label htmlFor="name">
+            <label htmlFor="user_email">
               <span className="text-[#999999]">E-mail</span>
               <input
-                id="name"
-                name="name"
+                id="user_email"
+                name="user_email"
                 type="email"
                 placeholder="Votre adresse e-mail"
                 value={email}
@@ -286,8 +320,9 @@ function Home() {
               type="submit"
               className="mx-auto mt-6 inline-block text-white-w bg-acid-w hover:bg-acid-w-light focus:ring-4 focus:outline-none focus:ring-acid-w-light font-medium rounded-lg px-8 py-2.5 text-center ease-in-out duration-300"
             >
-              Submit
+              Envoyer
             </button>
+            <ToastContainer />
           </form>
         </article>
       </section>
