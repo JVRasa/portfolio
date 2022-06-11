@@ -7,11 +7,11 @@ function ModalPro1() {
     <section
       className={`bg-acid-w h-[100vh] fixed top-0 left-0 w-[100vw] ${
         is2ndModalOpen
-          ? 'translate-x-0 shadow-[500px_0px_0px_0px_#FF30AA]'
+          ? 'translate-x-0 shadow-[500px_0px_0px_0px_#FF30AA] overflow-auto'
           : '-translate-x-full shadow-[0px_0px_0px_0px_#FF30AA]'
       } ease-in-out duration-[500ms]`}
     >
-      <div className="flex justify-end w-[90%] mx-auto mt-0">
+      <div className="flex w-[90%] mx-auto mt-0">
         <button
           type="button"
           className="text-8xl md:text-[10rem] font-black text-purple-r"
@@ -24,7 +24,7 @@ function ModalPro1() {
         <div className="text-tron-t text-2xl mb-2 md:text-xl">
           PROJET EN FORMATION
         </div>
-        <div className="border-4 border-tron-t px-4 py-2 md:py-4 mb-2 md:w-[40%]">
+        <div className="border-4 border-tron-t px-4 py-2 md:py-4 mb-2 md:w-[60%]">
           <h1 className="text-tron-t text-7xl font-bold text-center md:text-6xl">
             JETREE
           </h1>
@@ -52,7 +52,7 @@ function ModalPro1() {
       <div className="bg-tron-t md:mx-auto mx-20 my-10 text-3xl p-4 md:w-[15%]">
         <p className="text-center text-acid-w">VISITER</p>
       </div>
-      <p className="text-white-w text-xl font-light text-center">
+      <p className="text-white-w text-xl font-light text-center pb-6">
         <span className="font-bold">Réalisé en</span> : Mai 2022
       </p>
     </section>

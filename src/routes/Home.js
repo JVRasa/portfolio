@@ -5,6 +5,8 @@ import ModalPro3 from '../components/ModalPro3';
 import ModalPro4 from '../components/ModalPro4';
 import ModalContext from '../contexts/ModalContext';
 import proJeTree from '../img/projet.jpg';
+import linkedIcon from '../img/linkedinWhite.png';
+import githubIcon from '../img/githubWhite.png';
 
 function Home() {
   const {
@@ -31,7 +33,26 @@ function Home() {
             développeuse web fullstack junior
           </h2>
         </div>
-        <div className="hidden md:flex md:items-end">indeed / github</div>
+        <div className="hidden md:flex md:items-end md:justify-end md:flex-col md:mr-4 md:mb-6">
+          <a
+            href="https://www.linkedin.com/in/julie-rasa/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={linkedIcon}
+              alt="linkedin icon"
+              className="w-16 h-16 cursor-pointer hover:scale-125"
+            />
+          </a>{' '}
+          <a href="https://github.com/JVRasa" target="_blank" rel="noreferrer">
+            <img
+              src={githubIcon}
+              alt="github icon"
+              className="w-14 h-14 mr-1 cursor-pointer hover:scale-125"
+            />
+          </a>
+        </div>
       </section>
       <section id="projets" className="bg-white-w py-6 h-full md:py-16">
         <h1 className="pb-6 text-acid-w text-5xl font-bold text-center">
@@ -164,7 +185,7 @@ function Home() {
           </article>
         </div>
       </section>
-      <section id="apropos" className="pb-28">
+      <section id="apropos" className="pb-24">
         <h1 className="pb-6 pt-16 text-tron-t text-5xl font-bold text-center">
           A PROPOS
         </h1>
@@ -190,8 +211,11 @@ function Home() {
           </p>
         </div>
       </section>
-      <section id="contact" className="bg-white-w pb-12">
-        contactez moi
+      <section id="contact" className="bg-white-w pb-12 py-6">
+        <h1 className="pt-6 text-acid-w text-5xl font-bold text-center">
+          <span className="md:hidden">CONTACT</span>
+          <span className="hidden md:inline">ME CONTACTER</span>
+        </h1>
       </section>
 
       <ModalPro1 />
