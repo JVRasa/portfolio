@@ -363,15 +363,9 @@ function Home() {
             le design et le graphisme - ce qui m’a conduit, de fil en aiguille,
             au code et au développement web. Aujourd’hui je souhaite améliorer
             mes compétences, en apprendre plus et surtout transformer une
-            passion en métier.{' '}
-            <p className="text-xl my-3 font-semibold text-acid-w">
-              ACTUELLEMENT
-            </p>
-            <p>
-              En recherche d'un contrat de professionnalisation d'un an à partir
-              de septembre 2022.
-            </p>
+            passion en métier.
           </p>
+
           <p className="text-xl my-3 font-semibold text-acid-w">MES TECHNOS</p>
           <p>
             ReactJs, NodeJs, NextJs, Prisma, Cypress, SQL, Javascript, CSS,
@@ -392,8 +386,9 @@ function Home() {
         </h1>
         <article className="w-[80%] m-auto mt-6 md:w-[60%]">
           <p className="md:text-center">
-            Si mon profil vous intéresse, n'hésitez pas à me contacter
-            directement sur{' '}
+            Je suis en recherche d'un contrat de professionnalisation d'un an à
+            partir de septembre 2022. Si mon profil vous intéresse, n'hésitez
+            pas à me contacter directement sur{' '}
             <a
               href="https://www.linkedin.com/in/julie-rasa/"
               target="_blank"
@@ -402,7 +397,7 @@ function Home() {
             >
               LinkedIn
             </a>{' '}
-            ou via le formulaire ci dessous
+            ou via le formulaire ci dessous :
           </p>
           <form
             ref={form}
