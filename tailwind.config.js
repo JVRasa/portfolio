@@ -1,10 +1,17 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '1024px',
+    },
     colors: {
       'purple-r': '#FF30AA',
       'tron-t': '#00EEE2',
       'acid-w': '#5738CE',
+      'acid-w-light': '#8973dc',
       'pacman-y': '#EDFF00',
       'white-w': '#FFFFFF',
     },
@@ -14,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
