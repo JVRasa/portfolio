@@ -169,7 +169,7 @@ function Home() {
     <>
       <section id="home" className="h-screen md:flex">
         <div className="w-4/5 md:w-max m-auto md:ml-28 space-y-2 h-[85vh] flex flex-col justify-center">
-          <p className="text-tron-t uppercase text-3xl">Portofolio de</p>
+          <p className="text-tron-t uppercase text-3xl">Portfolio de</p>
           <div className="border-4 border-tron-t px-4 py-2 md:py-4">
             <h1 className="text-tron-t uppercase text-[68px] md:text-8xl md:text-center font-bold">
               Julie R.
@@ -363,7 +363,14 @@ function Home() {
             le design et le graphisme - ce qui m’a conduit, de fil en aiguille,
             au code et au développement web. Aujourd’hui je souhaite améliorer
             mes compétences, en apprendre plus et surtout transformer une
-            passion en métier.
+            passion en métier.{' '}
+            <p className="text-xl my-3 font-semibold text-acid-w">
+              ACTUELLEMENT
+            </p>
+            <p>
+              En recherche d'un contrat de professionnalisation d'un an à partir
+              de septembre 2022.
+            </p>
           </p>
           <p className="text-xl my-3 font-semibold text-acid-w">MES TECHNOS</p>
           <p>
