@@ -12,7 +12,7 @@ function Header() {
       {!isOpen ? (
         <button
           type="button"
-          className="bg-tron-t p-4 fixed top-2 right-2 z-10 cursor-pointer"
+          className="bg-tron-t p-4 fixed top-2 right-2 z-10 cursor-pointer hover:rounded-2xl hover:scale-90 ease-in-out duration-500 "
           onClick={() => setIsOpen(!isOpen)}
         >
           <MenuAlt3Icon className="h-8 w-8 text-acid-w" />
