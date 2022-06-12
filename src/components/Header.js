@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { MenuAlt3Icon } from '@heroicons/react/solid';
 import { HashLink } from 'react-router-hash-link';
-import linkedIcon from '../img/linkedin.png';
-import githubIcon from '../img/github.png';
+import linkedIcon from '../img/linkedinWhite.png';
+import githubIcon from '../img/githubWhite.png';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);

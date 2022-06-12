@@ -54,10 +54,9 @@ function Home() {
         process.env.REACT_APP_PUBLIC_ID
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           toast('🚀 Message envoyé avec succès, merci !', {
-            position: 'bottom-center',
+            position: 'top-center',
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
