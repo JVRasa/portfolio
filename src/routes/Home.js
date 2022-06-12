@@ -1,4 +1,5 @@
-import React, { useContext, useState, useRef } from 'react';
+/* eslint-disable object-curly-newline */
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import ModalContext from '../contexts/ModalContext';
 
@@ -67,6 +68,49 @@ function Home() {
       );
   };
 
+  const [mousePosition, setMousePosition] = useState({
+    x: null,
+    y: null,
+  });
+
+  useEffect(() => {
+    function handle(e) {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    }
+    window.addEventListener('mousemove', handle);
+
+    return () => window.removeEventListener('mousemove', handle);
+  });
+
+  const { x, y } = mousePosition;
+
+  const objects = [
+    {
+      top: 110,
+      left: 34,
+      name: 'p',
+    },
+    {
+      top: 98,
+      left: 134,
+      name: 'w',
+    },
+  ];
+
+  const xLeft = (x * 5) / 100;
+  const yTop = (y * 5) / 100;
+
+  // const style = {
+  //   position: 'absolute',
+  //   top: 110,
+  //   left: 110,
+  //   transform: `translate(${xLeft}px, ${yTop}px)`,
+  // };
+
+  console.log(x, y);
   return (
     <>
       <section id="home" className="h-screen md:flex">
@@ -101,6 +145,19 @@ function Home() {
             />
           </a>
         </div>
+        {objects.map((object) => (
+          <div
+            style={{
+              position: 'absolute',
+              top: object.top,
+              left: object.left,
+              transform: `translate(${xLeft}px, ${yTop}px)`,
+              transitionTimingFunction: 'ease-in-out',
+            }}
+          >
+            {object.name}
+          </div>
+        ))}
       </section>
       <section id="projets" className="bg-white-w py-6 h-full md:py-16">
         <h1 className="pb-6 text-acid-w text-5xl font-bold text-center">
