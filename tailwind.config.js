@@ -3,6 +3,10 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '1024px',
+    },
     colors: {
       'purple-r': '#FF30AA',
       'tron-t': '#00EEE2',

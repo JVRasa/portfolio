@@ -13,6 +13,13 @@ import jeTreeImage from '../img/jetree.png';
 import nanarImage from '../img/nanar.png';
 import super5snakeImage from '../img/s5s.png';
 
+import rondBleu from '../img/formes/rond-b.png';
+import lignes from '../img/formes/lignes.png';
+import rondJaune from '../img/formes/rond-j.png';
+import triangleBleu from '../img/formes/tri-b.png';
+import triangleJaune from '../img/formes/tri-j.png';
+import triangleRose from '../img/formes/tri-r.png';
+
 import linkedIcon from '../img/linkedinWhite.png';
 import githubIcon from '../img/githubWhite.png';
 
@@ -89,28 +96,76 @@ function Home() {
 
   const objects = [
     {
-      top: 110,
-      left: 34,
-      name: 'p',
+      name: 'rondJaune',
+      top: null,
+      left: 23,
+      bottom: 90,
+      right: null,
+      img: rondJaune,
+      hidden: true,
+      width: '54px',
+      height: '54px',
     },
     {
-      top: 98,
-      left: 134,
-      name: 'w',
+      name: 'triangleJaune',
+      top: 48,
+      left: 285,
+      bottom: null,
+      right: null,
+      img: triangleJaune,
+      hidden: true,
+      width: '54px',
+      height: '54px',
+    },
+    {
+      name: 'triangleBleu',
+      top: null,
+      left: 558,
+      bottom: 158,
+      right: null,
+      img: triangleBleu,
+      hidden: true,
+      width: '54px',
+      height: '54px',
+    },
+    {
+      name: 'rondBleu',
+      top: 19,
+      left: null,
+      bottom: null,
+      right: 317,
+      img: rondBleu,
+      hidden: true,
+      width: '54px',
+      height: '54px',
+    },
+    {
+      name: 'triangleRose',
+      top: 306,
+      left: null,
+      bottom: null,
+      right: 480,
+      img: triangleRose,
+      hidden: true,
+      width: '54px',
+      height: '54px',
+    },
+    {
+      name: 'lignes',
+      top: 401,
+      left: null,
+      bottom: null,
+      right: 140,
+      img: lignes,
+      hidden: true,
+      width: '124px',
+      height: '84px',
     },
   ];
 
-  const xLeft = (x * 5) / 100;
-  const yTop = (y * 5) / 100;
+  const xLeft = (x * 10) / 200;
+  const yTop = (y * 10) / 200;
 
-  // const style = {
-  //   position: 'absolute',
-  //   top: 110,
-  //   left: 110,
-  //   transform: `translate(${xLeft}px, ${yTop}px)`,
-  // };
-
-  console.log(x, y);
   return (
     <>
       <section id="home" className="h-screen md:flex">
@@ -147,15 +202,23 @@ function Home() {
         </div>
         {objects.map((object) => (
           <div
+            key={object.name}
+            className={`${object.hidden && 'hidden'} md:${
+              object.hidden && 'inline'
+            } `}
             style={{
               position: 'absolute',
               top: object.top,
               left: object.left,
+              bottom: object.bottom,
+              right: object.right,
               transform: `translate(${xLeft}px, ${yTop}px)`,
-              transitionTimingFunction: 'ease-in-out',
+              width: object.width,
+              height: object.height,
+              transition: 'transition: transform 330ms ease-in-out',
             }}
           >
-            {object.name}
+            <img src={object.img} alt={object.name} />
           </div>
         ))}
       </section>
