@@ -10,8 +10,8 @@ module.exports = {
     colors: {
       'purple-r': '#FF30AA',
       'tron-t': '#00EEE2',
-      'acid-w': '#5738CE',
-      'acid-w-light': '#8973dc',
+      'acid-w': '#3866ce',
+      'acid-w-light': '#7393DC',
       'pacman-y': '#EDFF00',
       'white-w': '#FFFFFF',
     },
