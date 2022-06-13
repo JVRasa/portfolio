@@ -8,10 +8,10 @@ import ModalPro2 from '../components/ModalPro2';
 import ModalPro3 from '../components/ModalPro3';
 import ModalPro4 from '../components/ModalPro4';
 
-import locaBImage from '../img/locab.png';
-import jeTreeImage from '../img/jetree.png';
-import nanarImage from '../img/nanar.png';
-import super5snakeImage from '../img/s5s.png';
+import locaBImage from '../img/locabS.png';
+import jeTreeImage from '../img/jetree1.png';
+import nanarImage from '../img/nanartest.png';
+import super5snakeImage from '../img/s5stest.png';
 
 import rondBleu from '../img/formes/rond-b.png';
 import lignes from '../img/formes/lignes.png';
