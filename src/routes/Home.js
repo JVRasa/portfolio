@@ -225,9 +225,9 @@ function Home() {
         <h1 className="pb-6 text-acid-w text-5xl font-bold text-center">
           MES PROJETS
         </h1>
-        <div className="w-4/5 md:w-3/5 h-[150vh] md:h-[95vh] m-auto grid gap-3 grid-cols-1 md:grid-cols-3">
+        <div className="w-4/5 md:w-3/5 h-[150vh] md:h-[95vh] m-auto grid gap-3 grid-cols-1 md:grid-cols-2">
           <article
-            className="h-full w-full md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3 relative overflow-hidden cursor-pointer"
+            className="h-full w-full md:col-start-1 relative overflow-hidden cursor-pointer"
             style={{
               backgroundImage: `url(${locaBImage})`,
               backgroundSize: 'cover',
@@ -258,7 +258,7 @@ function Home() {
             </div>
           </article>
           <article
-            className="h-full w-full md:col-start-2 md:col-end-3 relative overflow-hidden cursor-pointer"
+            className="h-full w-full relative overflow-hidden cursor-pointer"
             style={{
               backgroundImage: `url(${jeTreeImage})`,
               backgroundSize: 'cover',
@@ -289,7 +289,7 @@ function Home() {
             </div>
           </article>
           <article
-            className="h-full w-full md:col-start-2 md:col-end-3 md:row-start-2 md:row-end-3 relative overflow-hidden cursor-pointer"
+            className="h-full w-full relative overflow-hidden cursor-pointer"
             style={{
               backgroundImage: `url(${nanarImage})`,
               backgroundSize: 'cover',
@@ -320,7 +320,7 @@ function Home() {
             </div>
           </article>
           <article
-            className="h-full w-full md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-3 relative overflow-hidden cursor-pointer"
+            className="h-full w-full relative overflow-hidden cursor-pointer"
             style={{
               backgroundImage: `url(${super5snakeImage})`,
               backgroundSize: 'cover',
@@ -353,10 +353,10 @@ function Home() {
         </div>
       </section>
       <section id="apropos" className="pb-24">
-        <h1 className="pb-6 pt-16 text-tron-t text-5xl font-bold text-center">
+        <h1 className="pb-6 pt-16 text-white-w text-5xl font-bold text-center">
           A PROPOS
         </h1>
-        <div className="bg-white-w shadow-[20px_20px_0px_0px_#00EEE2] w-10/12 md:w-3/5 m-auto p-3">
+        <div className="w-10/12 md:w-2/5 m-auto p-3 text-tron-t">
           <p>
             Hello ! Je m’appelle Julie et je suis actuellement en formation pour
             devenir développeuse web fullstack. J’ai toujours eu un attrait pour
@@ -366,12 +366,12 @@ function Home() {
             passion en métier.
           </p>
 
-          <p className="text-xl my-3 font-semibold text-acid-w">MES TECHNOS</p>
+          <p className="text-xl my-3 font-semibold text-white-w">MES TECHNOS</p>
           <p>
             ReactJs, NodeJs, NextJs, Prisma, Cypress, SQL, Javascript, CSS,
             HTML.
           </p>
-          <p className="text-xl my-3 font-semibold text-acid-w">
+          <p className="text-xl my-3 font-semibold text-white-w">
             ET POUR FINIR... ?
           </p>
           <p>
