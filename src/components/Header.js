@@ -12,7 +12,7 @@ function Header() {
       {!isOpen ? (
         <button
           type="button"
-          className="bg-tron-t p-4 fixed top-2 right-2 z-10 cursor-pointer hover:rounded-2xl hover:scale-90 ease-in-out duration-500 "
+          className="bg-tron-t p-4 fixed top-2 right-2 z-10 cursor-pointer hover:rounded-2xl hover:scale-75 ease-in-out duration-200 "
           onClick={() => setIsOpen(!isOpen)}
         >
           <MenuAlt3Icon className="h-8 w-8 text-acid-w" />
@@ -34,38 +34,46 @@ function Header() {
         } ease-in-out duration-700`}
       >
         <ul className="h-[90%] flex flex-col justify-center items-center gap-4 md:gap-6 md:h-screen text-center">
-          <HashLink
-            smooth
-            to="/#home"
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
-          >
-            ACCUEIL
-          </HashLink>
-          <HashLink
-            smooth
-            to="/#projets"
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
-          >
-            MES PROJETS
-          </HashLink>
-          <HashLink
-            smooth
-            to="/#apropos"
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
-          >
-            A PROPOS
-          </HashLink>
-          <HashLink
-            smooth
-            to="/#contact"
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
-          >
-            ME CONTACTER
-          </HashLink>
+          <li>
+            <HashLink
+              smooth
+              to="/#home"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
+            >
+              ACCUEIL
+            </HashLink>
+          </li>
+          <li>
+            <HashLink
+              smooth
+              to="/#projets"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
+            >
+              MES PROJETS
+            </HashLink>
+          </li>
+          <li>
+            <HashLink
+              smooth
+              to="/#apropos"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
+            >
+              A PROPOS
+            </HashLink>
+          </li>
+          <li>
+            <HashLink
+              smooth
+              to="/#contact"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-acid-w text-4xl font-black hover:text-white-w hover:text-5xl tracking-wide md:text-5xl md:hover:text-6xl"
+            >
+              ME CONTACTER
+            </HashLink>
+          </li>
           <div className="flex items-center mt-6 gap-4 md:gap-8">
             <a
               href="https://www.linkedin.com/in/julie-rasa/"

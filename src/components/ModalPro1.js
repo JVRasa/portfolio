@@ -50,7 +50,8 @@ function ModalPro1() {
       </article>
 
       <p className="text-white-w pt-8 text-xl font-light text-center pb-6">
-        <span className="font-bold">Réalisé en</span> : Mai - Juillet 2022
+        <span className="font-bold">En cours de réalisation</span> (Mai -
+        Juillet 2022)
       </p>
     </section>
   );

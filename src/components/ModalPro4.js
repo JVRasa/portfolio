@@ -50,7 +50,19 @@ function ModalPro1() {
         </p>
       </article>
 
-      <p className="text-white-w pt-8 text-xl font-light text-center pb-6">
+      <div className="my-10  mt-12 text-3xl">
+        <p className="text-center ">
+          <a
+            href="https://stupendous-croquembouche-d49652.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="bg-tron-t text-acid-w font-bold px-8 py-4 hover:text-4xl cursor-pointer no-underline ease-in-out duration-300"
+          >
+            VISITER
+          </a>
+        </p>
+      </div>
+      <p className="text-white-w text-xl font-light text-center pb-6">
         <span className="font-bold">Réalisé en</span> : Mars 2022
       </p>
     </section>
